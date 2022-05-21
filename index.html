@@ -5,18 +5,24 @@
         <title> Great Clicker </title>
         <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
         <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/menu.css" />
     </head>
     <body>
-                   
+        <div class="dropdown">
+            <button class="boutonmenuprincipal">Menu</button>
+            <div class="dropdown-child">
+                <span onclick="dispMenu('.upgrade','none'), dispMenu('.stats','none'), dispMenu('.shop','flex')">Shop</span>
+                <span onclick="dispMenu('.shop','none'), dispMenu('.stats','none'), dispMenu('.upgrade','flex')">Upgrade</span>
+                <span onclick="dispMenu('.shop','none'), dispMenu('.upgrade', 'none'), dispMenu('.stats', 'flex')">Stats</span>
+            </div>
+        </div>
+        
         <div class="content">
-            <span class="menu">
-                Menu :
-            </span>
             <h1>
                 The greatest clicker :             
             </h1>
-            <a href="./help/"> 
-                <span class="help">
+            <a class="help" href="./help/"> 
+                <span>
                     Need help ?
                 </span>
             </a>
@@ -24,8 +30,41 @@
                      Click me !
             </button>
             <p>
-                Counter :  <span id="counter">0</span>
+                Counter :  <span id="counter"></span>
             </p>
+
+            <div class="shop">
+                <div>
+                    <button>1st Shop</button>
+                    <button>2nd Shop</button>
+                    <button>3rd Shop</button>
+                    <button onclick="dispMenu('.shop','none')">X</button>
+                </div>
+                <span>Shop : (soon)</span>
+
+            </div>
+
+            <div class="upgrade">
+                <div>
+                    <button>More clicks</button>
+                    <button>More clicks</button>
+                    <button>More clicks</button>
+                    <button onclick="dispMenu('.upgrade','none')">X</button>
+                </div>
+                <span>Buy click : x<span id="multipli"> </span> (cost : <span id="cost"> </span> ) <button onclick="clickMulti()"> Buy !</button></span>
+                
+            </div>
+
+            <div class="stats">
+                <div>
+                    <button>Personnal stats</button>
+                    <button>Achievements</button>
+                    <button onclick="dispMenu('.stats','none')">X</button>
+                </div>
+                <span>Yout stats : (soon)</span>
+                
+            </div>
+
         </div>
         
         <script src="./script/clicker.js"></script>
