@@ -14,6 +14,7 @@
                 <span onclick="dispMenu('.upgrade','none'), dispMenu('.stats','none'), dispMenu('.shop','flex')">Shop</span>
                 <span onclick="dispMenu('.shop','none'), dispMenu('.stats','none'), dispMenu('.upgrade','flex')">Upgrade</span>
                 <span onclick="dispMenu('.shop','none'), dispMenu('.upgrade', 'none'), dispMenu('.stats', 'flex')">Stats</span>
+                <span onclick="resetAll()">Reset all</span>
             </div>
         </div>
         
@@ -40,7 +41,7 @@
                     <button>3rd Shop</button>
                     <button onclick="dispMenu('.shop','none')">X</button>
                 </div>
-                <span>Shop : (soon)</span>
+                <span>Buy auto clicks : (1 / 2sec) (cost : 5000) <button onclick="buyAutoClicks()">Buy ! </button> </span> </span>
 
             </div>
 
@@ -51,7 +52,7 @@
                     <button>More clicks</button>
                     <button onclick="dispMenu('.upgrade','none')">X</button>
                 </div>
-                <span>Buy click : x<span id="multipli"> </span> (cost : <span id="cost"> </span> ) <button onclick="clickMulti()"> Buy !</button></span>
+                <span>Buy click : x<span id="multiplica"> </span> (cost : <span id="prix"> </span> ) <button onclick="clickMulti()"> Buy !</button></span>
                 
             </div>
 

@@ -52,6 +52,7 @@
 }
 .upgrade div{
     display: flex;
+    justify-content: space-between;
     border-bottom-style: solid;
 }
 .upgrade div button{
@@ -84,6 +85,7 @@
 }
 .stats div{
     display: flex;
+    justify-content: space-between;
     border-bottom-style: solid;
 }
 .stats div button{
@@ -116,6 +118,7 @@
 }
 .shop div{
     display: flex;
+    justify-content: space-between;
     border-bottom-style: solid;
 }
 .shop div button{
