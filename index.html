@@ -17,22 +17,30 @@
                 <span onclick="resetAll()">Reset all</span>
             </div>
         </div>
-        
+
         <div class="content">
             <h1>
-                The greatest clicker :             
+                Vampire Survivors clicker :
             </h1>
-            <a class="help" href="./help/"> 
+            <a class="help" href="./help/">
                 <span>
                     Need help ?
                 </span>
             </a>
-            <button class="click-zone" onclick="increment()">
-                     Click me !
+            <button class="click-zone" onclick="ennemiesDamage()">
+              <span id="eName"></span>
+              <img src="./img/Sprite-BAT1.webp" alt="">
+                <div id="BarHP">
+                    <span id="HP"></span>
+                </div>
             </button>
             <p>
-                Counter :  <span id="counter"></span>
+                Damages :  <span id="yourDamage"></span>
             </p>
+            <p>
+                Money : <span id="yourMoney"></span>
+            </p>
+
 
             <div class="shop">
                 <div>
@@ -53,7 +61,7 @@
                     <button onclick="dispMenu('.upgrade','none')">X</button>
                 </div>
                 <span>Buy click : x<span id="multiplica"> </span> (cost : <span id="prix"> </span> ) <button onclick="clickMulti()"> Buy !</button></span>
-                
+
             </div>
 
             <div class="stats">
@@ -63,11 +71,11 @@
                     <button onclick="dispMenu('.stats','none')">X</button>
                 </div>
                 <span>Your stats : (soon)</span>
-                
+
             </div>
 
         </div>
-        
+
         <script src="./script/clicker.js"></script>
     </body>
 </html>

@@ -1,11 +1,28 @@
-// Initialization function 
+// class ennemies
 
+class Ennemies {
+  constructor(eName, HP, constHP, img) {
+    this.eName = eName;
+    this.HP = HP;
+    this.constHP = constHP;
+    this.img = img;
+  }
+}
+
+// Initialization function
+/*
+
+class Date{
+
+}
+
+*/
 function Initialization(){
-    if(!localStorage.getItem('clicks')){
-        var clicks = Number(0);
+    if(!localStorage.getItem('damage')){
+        var damage = Number(5);
     }
     else{
-        var clicks = Number(localStorage.getItem('clicks'));
+        var damage = Number(localStorage.getItem('clicks'));
     }
     if(!localStorage.getItem('multipl')){
         var multipl =  Number(1);
@@ -24,35 +41,48 @@ function Initialization(){
     }
     else{
         var auto = Number(localStorage.getItem('auto'));
-    } 
-    return [clicks, multipl, costs, auto];
+    }
+    if(!localStorage.getItem('money')){
+        var money = Number(0);
+    }
+    else{
+        var money = Number(localStorage.getItem('money'));
+    }
+    return [damage, multipl, costs, auto, money];
 }
 
 // Display function
 
 function dispAll(){
-    counter.innerHTML = clicks;
+    yourDamage.innerHTML = damage;
     multiplica.innerHTML = multipl*2;
     prix.innerHTML = costs*multipl;
+    HP.innerHTML = bat.HP;
+    yourMoney.innerHTML = money;
+    eName.innerHTML = bat.eName;
 }
-function dispClicks(){
-    counter.innerHTML = clicks;
+function dispDamages(){
+    counter.innerHTML = damage;
 }
 
 function dispMenu(menu,style){
     document.querySelector(menu).style.display = style;
 }
 
-// Data 
+// Data
 
 data = Initialization();
-var clicks = Number(data[0]);
+var damage = Number(data[0]);
 var multipl = Number(data[1]);
 var costs = Number(data[2]);
 var auto = Number(data[3]);
+var money = Number(data[4])
 if(auto!=0){
     setInterval(autoClicks, 2000);
 }
+
+var bat = new Ennemies('Bat',200,200,'/img/bat')
+
 dispAll();
 
 // data save and reset
@@ -65,25 +95,21 @@ function makeSave(){
 }
 
 function resetAll(){
-    localStorage.removeItem('clicks');
+    localStorage.removeItem('damage');
     localStorage.removeItem('multipl');
-    localStorage.removeItem('costs'); 
+    localStorage.removeItem('costs');
     localStorage.removeItem('auto');
+    localStorage.removeItem('money');
+
     Initialization();
     location.reload();
 }
 
 // clicker function
 
-function increment(){
-    clicks = clicks + multipl;
-    counter.innerHTML = clicks;
-    makeSave();
-}
-
 function clickMulti(){
-    if(clicks >= costs*multipl){
-        clicks = clicks - multipl*costs;
+    if(money >= costs*multipl){
+        money = money - multipl*costs;
         multipl = multipl*2;
         costs = costs * multipl;
     }
@@ -96,7 +122,7 @@ function clickMulti(){
 }
 
 function autoClicks(){
-    clicks = clicks + auto;
+    ennemiesHP = ennemiesHP - auto;
     dispClicks();
 }
 
@@ -122,4 +148,23 @@ function buyAutoClicks(){
 
 function upgradeAuto(){
     // soon
+}
+
+// gestion des ennemies :
+
+function ennemiesDamage(){
+    if(bat.HP<=0){
+      return;
+    }
+
+    if(damage<=bat.HP){
+        bat.HP = bat.HP - damage;
+        prc = (bat.HP*100)/bat.constHP;
+        console.log('prc : '+String(prc)+'%)');
+        document.getElementById("BarHP").style.background = 'linear-gradient(110deg, red '+String(prc)+'%, gray 0%)';
+        if(bat.HP<=0){
+          money = money + 10;
+        }
+        dispAll();
+    }
 }
