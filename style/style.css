@@ -45,18 +45,27 @@ h1{
     color: white;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.231);
-    padding: 0px 170px;
+    padding: 0px 0px;
+    border-style: none;
+    width: 50%;
 }
 .click-zone img{
-  padding: 0;
-  margin: 0;
+  width: fit-content;
+  margin: 50px;
 }
 .click-zone:hover{
     cursor: pointer;
 }
+.click-zone{
+    background-image: url('../img/Stage-Mad_Forest.webp');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 100%;
+}
 #BarHP{
     background: linear-gradient(110deg, red 100%, gray 0%);
-    width: 150%;
+    width: 90%;
+    margin: 40px;
 }
 #HP{
     text-align: center;
