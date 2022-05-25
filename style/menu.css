@@ -1,6 +1,4 @@
 .boutonmenuprincipal {
-    top: 10px;
-    left: 10px;
     font-weight: bold;
     font-size: 24px;
     padding: 10px 25px;
@@ -26,13 +24,17 @@
     min-width: 50px;
     font-size: 24px;
 }
+.drapdown-child a{
+  text-decoration : none;
+}
 .dropdown-child span {
     color: white;
     padding: 20px;
-    text-decoration: none;
     display: block;
 }
-
+.help{
+  text-decoration: none;
+}
 .dropdown-child span:hover {
     cursor: pointer;
 }

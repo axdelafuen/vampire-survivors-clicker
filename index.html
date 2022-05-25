@@ -8,31 +8,19 @@
         <link rel="stylesheet" href="./style/menu.css" />
     </head>
     <body>
-        <div class="dropdown">
-            <button class="boutonmenuprincipal">Menu</button>
-            <div class="dropdown-child">
-                <span onclick="dispMenu('.upgrade','none'), dispMenu('.stats','none'), dispMenu('.shop','flex')">Shop</span>
-                <span onclick="dispMenu('.shop','none'), dispMenu('.stats','none'), dispMenu('.upgrade','flex')">Upgrade</span>
-                <span onclick="dispMenu('.shop','none'), dispMenu('.upgrade', 'none'), dispMenu('.stats', 'flex')">Stats</span>
-                <span onclick="resetAll()">Reset all</span>
-            </div>
-        </div>
-
         <div class="content">
             <h1>
                 Vampire Survivors clicker :
             </h1>
-            <a class="help" href="./help/">
-                <span>
-                    Need help ?
-                </span>
-            </a>
+
             <button class="click-zone" onclick="ennemiesDamage()">
-              <img id="enemyImg" src="" alt="">
+              <div class="shadow">
+                <img id="enemyImg" src="" alt="">
+              </div>
               <span id="eName"></span>
-                <div id="BarHP">
-                    <span id="HP"></span>
-                </div>
+              <div id="BarHP">
+                  <span id="HP"></span>
+              </div>
             </button>
             <p>
                 Damages :  <span id="yourDamage"></span>
@@ -40,7 +28,6 @@
             <p>
                 Money : <span id="yourMoney"></span>
             </p>
-
 
             <div class="shop">
                 <div>
@@ -73,9 +60,18 @@
                 <span>Your stats : (soon)</span>
 
             </div>
+          </div>
 
-        </div>
-
+            <div class="dropdown">
+                <button class="boutonmenuprincipal">Menu</button>
+                <div class="dropdown-child">
+                  <span onclick="dispMenu('.upgrade','none'), dispMenu('.stats','none'), dispMenu('.shop','flex')">Shop</span>
+                  <span onclick="dispMenu('.shop','none'), dispMenu('.stats','none'), dispMenu('.upgrade','flex')">Upgrade</span>
+                  <span onclick="dispMenu('.shop','none'), dispMenu('.upgrade', 'none'), dispMenu('.stats', 'flex')">Stats</span>
+                  <span onclick="resetAll()">Reset all</span>
+                  <a class="help" href="./help/"> <span>Need help ?</span> </a>
+                </div>
+              </div>
         <script src="./script/clicker.js"></script>
     </body>
 </html>

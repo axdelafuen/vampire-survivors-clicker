@@ -38,7 +38,7 @@ class Data{
           this.auto = Number(localStorage.getItem('auto'));
       }
       if(!localStorage.getItem('money')){
-          this.money = Number(10000);
+          this.money = Number(0);
       }
       else{
           this.money = Number(localStorage.getItem('money'));
@@ -128,7 +128,7 @@ function autoClicks(){
       killEnnemie();
     }
     else{
-      enemy.HP = enemy.HP - data.auto;
+      enemy.HP = enemy.HP - data.auto*data.multipl;
       prc = (enemy.HP*100)/enemy.constHP;
       //console.log('prc : '+String(prc)+'%)');
       document.getElementById("BarHP").style.background = 'linear-gradient(110deg, red '+String(prc)+'%, gray 0%)';
