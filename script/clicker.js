@@ -73,6 +73,7 @@ var data = new Data();
 
 if(data.auto!=0){
     setInterval(autoClicks, 2000);
+    autoClicksBuy.innerHTML = 'Max ! ';
 }
 
 
@@ -144,6 +145,7 @@ function buyAutoClicks(){
     else{
         if(data.money >= 5000){
             data.money = data.money - 5000;
+            autoClicksBuy.innerHTML = 'Buyed ! ';
             data.auto=1;
             dispHP();
             setInterval(autoClicks, 2000);
