@@ -1,6 +1,5 @@
 .boutonmenuprincipal {
     font-weight: bold;
-    font-size: 24px;
     padding: 10px 25px;
     background-color: gray;
     color: white;
@@ -74,4 +73,11 @@
 .shop span span{
     padding: 0;
     margin: 0;
+}
+.shop span{
+  display: flex;
+  align-items: center;
+}
+.shop span img{
+  width: 55px;
 }

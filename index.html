@@ -12,7 +12,17 @@
             <h1>
                 Vampire Survivors clicker :
             </h1>
-
+            <div class="infos">
+              <p>
+                  Damages :  <span id="yourDamage"></span>
+              </p>
+              <p>
+                  Heros attacks :  <span id="yourAuto"></span>
+              </p>
+              <p>
+                  <img id="moneySprite" src="./img/Sprite-Gold_Coin.webp" alt="Money "> : <span id="yourMoney"></span>
+              </p>
+            </div>
             <button class="click-zone" onclick="ennemiesDamage()">
               <div class="shadow">
                 <img id="enemyImg" src="" alt="">
@@ -22,32 +32,33 @@
                   <span id="HP"></span>
               </div>
             </button>
-            <p>
-                Damages :  <span id="yourDamage"></span>
-            </p>
-            <p>
-                Money : <span id="yourMoney"></span>
-            </p>
-
+            <div id="BarLevel">
+                <span id="Level">Level 1 <span id="LevelPrc"> (0%) **SOON** </span> </span>
+            </div>
+            <div class="timer">
+                Timer : <span id="time"></span>
+            </div>
             <div class="shop">
                 <div>
-                    <button>Auto Clicks</button>
-                    <button>*2nd Shop*</button>
-                    <button>*3rd Shop*</button>
+                    <button>Heros</button>
+                    <button>Weapons</button>
+                    <button>Passives</button>
                     <button onclick="dispMenu('.shop','none')">X</button>
                 </div>
-                <span>Buy auto clicks : (1 / 2sec) (cost : 5000) <button onclick="buyAutoClicks()"> <span id="autoClicksBuy"> Buy ! </span> </button> </span> </span>
+                <span> <img src="./img/Sprite-Antonio.webp" alt=""> Antonio : (1 / sec) (cost : 5000) <button onclick="buyAutoClicks()"> <span id="autoClicksBuy"> Buy ! </span> </button> </span>
+                <span> <img src="./img/Sprite-Imelda.webp" alt=""> Imelda : SOON <button> <span> SOON </span> </button> </span>
+                <span> <img src="./img/Sprite-Pasqualina.webp" alt=""> Pasqualina : SOON <button> <span> SOON </span> </button> </span>
 
             </div>
 
             <div class="upgrade shop">
                 <div>
-                    <button>Multiple clicks</button>
-                    <button>More auto clicks speed</button>
-                    <button>Gain more money</button>
+                    <button>Raise damages</button>
+                    <button>Up heros</button>
+                    <button>Gain more coins</button>
                     <button onclick="dispMenu('.upgrade','none')">X</button>
                 </div>
-                <span>Buy click : x<span id="multiplica"> </span> (cost : <span id="prix"> </span> ) <button onclick="clickMulti()"> Buy !</button></span>
+                <span> <img src="./img/Sprite-Spinach.webp" alt=""> Raise damages : x<span id="multiplica"> </span> (cost : <span id="prix"> </span> ) <button onclick="clickMulti()"> Buy !</button></span>
 
             </div>
 
