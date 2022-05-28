@@ -91,7 +91,7 @@ h1{
   text-align: center;
 }
 .timer{
-  position: fixed;
+  position: absolute;
   right: 10px;
   font-weight: bold;
   padding: 10px 25px;

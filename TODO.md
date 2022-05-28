@@ -9,7 +9,7 @@ To Do : VS Clicker
 
 - [ ] Remplir la page help avec toutes les informations sur le jeu + liens vers VS off (discord/github/steam..)
 
-- [ ] Changer le design des menus d'achats
+- [x] Changer le design des menus d'achats
 
 - [x] Modifier la zone 'damages / money' (utiliser des favicons...)
 
@@ -32,6 +32,8 @@ To Do : VS Clicker
 - [ ] Ajouter toute les armes actives/passives pour des buffs
 
 - [x] Ajouter une bar d'expérience, ainsi que des niveaux.
+
+- [ ] Lorsqu'un ennemie est vaincu, afficher le nombre d'xp obtenus (avec sprite de gem)
 
 - [ ] Selon son niveau on débloque la possibilité d'acheter des nouveaux persos.
 
