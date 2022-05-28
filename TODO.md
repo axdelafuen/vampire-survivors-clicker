@@ -9,17 +9,19 @@ To Do : VS Clicker
 
 - [ ] Remplir la page help avec toutes les informations sur le jeu + liens vers VS off (discord/github/steam..)
 
-- [ ] Changer le design des menu d'achat + modifier la zone 'damages / money' (utiliser des favicons...)
+- [ ] Changer le design des menus d'achats
+
+- [x] Modifier la zone 'damages / money' (utiliser des favicons...)
 
 - [x] Compléter le dictionnaire de mobs
 
-- [ ] Ajouter un taux d'appartition diférent selon les élites
+- [x] Ajouter un taux d'appartition diférent selon les élites
 
-- [ ] Les élites doivent rapporter plus d'argent
+- [x] Les élites doivent rapporter plus d'argent
 
 - [ ] Faire la rubriques stats
 
-- [ ] Une fois tout les élites battues ainsi que + 30 minutes dans la zone = changer la zone
+- [ ] Une fois tout les élites battues (et Death) ainsi que + 30 minutes dans la zone = changer la zone
 
 - [x] Changer l'autoclicks = avoir des 'héros' qui attackes pour nous.
 
@@ -29,11 +31,13 @@ To Do : VS Clicker
 
 - [ ] Ajouter toute les armes actives/passives pour des buffs
 
-- [ ] Ajouter une bar d'expérience, ainsi que des niveaux. Selon son niveau on débloque des nouveaux persos.
+- [x] Ajouter une bar d'expérience, ainsi que des niveaux.
+
+- [ ] Selon son niveau on débloque la possibilité d'acheter des nouveaux persos.
 
 - [x] Ajouter le timer (pour les 30mins)
 
-- [ ] Faire que 'Death' ne spawn que une fois que les 30min sont atteintes
+- [x] Faire que 'Death' ne spawn que une fois que les 30min sont atteintes
 
 - [ ] Page de connexion
 
