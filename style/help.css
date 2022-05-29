@@ -33,3 +33,10 @@ h1{
   padding-top: 0px;
   margin-bottom: 20px;
 }
+.help span{
+  font-size: 20px;
+}
+.help span a{
+  color: white;
+  font-weight: bold;
+}

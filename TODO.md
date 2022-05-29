@@ -7,7 +7,7 @@ To Do : VS Clicker
 
 - [x] Faire la page 'Help'
 
-- [ ] Remplir la page help avec toutes les informations sur le jeu + liens vers VS off (discord/github/steam..)
+- [x] Remplir la page help avec toutes les informations sur le jeu + liens vers VS off (discord/github/steam..)
 
 - [x] Changer le design des menus d'achats
 
@@ -46,3 +46,9 @@ To Do : VS Clicker
 - [ ] System de sauvegarde des données
 
 - [ ] Faire un message de confirmation pour le 'reset all'
+
+- [ ] Fix le fait que refresh = changer de mob.
+
+- [ ] Faire une classe pour les héros
+
+- [ ] Refaire tout le system d'attaque plus propre. (plus lisible)
