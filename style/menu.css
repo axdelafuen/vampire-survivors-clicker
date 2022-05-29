@@ -51,13 +51,17 @@
     font-size: 24px;
     margin-bottom: 50px;
 }
-.shop div{
+.navBar{
     display: flex;
     justify-content: space-between;
     background-color: rgba(148, 147, 147, 0.6);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px;
+}
+#shopSection{
+  display: flex;
+  flex-direction: column;
 }
 .shop div button{
   border: none;

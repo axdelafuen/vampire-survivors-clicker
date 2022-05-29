@@ -11,6 +11,18 @@ class Ennemies {
   }
 }
 
+// class Heros
+
+class Heros{
+  constructor(hName, dmg, cost, img, levelReq){
+    this.hName = hName;
+    this.dmg = dmg;
+    this.cost = cost;
+    this.img = img;
+    this.levelReq = levelReq;
+  }
+}
+
 // Initialization function
 
 class Data{
@@ -32,12 +44,6 @@ class Data{
       }
       else{
           this.costs = Number(localStorage.getItem('costs'));
-      }
-      if(!localStorage.getItem('auto')){
-          this.auto = Number(0);
-      }
-      else{
-          this.auto = Number(localStorage.getItem('auto'));
       }
       if(!localStorage.getItem('money')){
           this.money = Number(0);
@@ -82,12 +88,6 @@ function dispAll(){
     yourMoney.innerHTML = data.money;
     eName.innerHTML = enemy.eName;
     document.getElementById("enemyImg").src=enemy.img;
-    if(data.auto==0){
-      yourAuto.innerHTML = '0/sec';
-    }
-    else{
-      yourAuto.innerHTML = data.damage*data.multipl+'/sec';
-    }
     dispLevel();
 }
 function dispDamages(){
@@ -103,11 +103,6 @@ function dispMenu(menu,style){
 // Data
 
 var data = new Data();
-
-if(data.auto!=0){
-    setInterval(autoClicks, 1000);
-    autoClicksBuy.innerHTML = 'Max ! ';
-}
 
 
 var enemyDict =
@@ -202,6 +197,14 @@ var enemyDict =
 var tmpEnemy = randomEnnemies();
 var enemy = new Ennemies(String(tmpEnemy.eName), Number(tmpEnemy.HP), Number(tmpEnemy.constHP), String(tmpEnemy.img), Number(tmpEnemy.dropMoney), Number(tmpEnemy.dropXP));
 
+var herosDict = [
+  new Heros('Antonio', 1, 5000, './img/heros/Sprite-Antonio.webp', 1),
+  new Heros('Imelda',3,7500,'./img/heros/Sprite-Imelda.webp',5),
+  new Heros('Pasqualina',10, 10000, './img/heros/Sprite-Pasqualina.webp',15),
+  new Heros('Gennaro', 15, 13000,'./img/heros/Sprite-Gennaro.webp',20),
+  new Heros('Arca', 18, 15000, './img/heros/Sprite-Arca.webp',25)
+]
+
 dispAll();
 
 // data save and reset
@@ -210,7 +213,6 @@ function makeSave(){
     localStorage.setItem('damage', data.damage);
     localStorage.setItem('multipl', data.multipl);
     localStorage.setItem('costs', data.costs);
-    localStorage.setItem('auto', data.auto);
     localStorage.setItem('money', data.money);
 }
 
@@ -218,7 +220,6 @@ function resetAll(){
     localStorage.removeItem('damage');
     localStorage.removeItem('multipl');
     localStorage.removeItem('costs');
-    localStorage.removeItem('auto');
     localStorage.removeItem('money');
     localStorage.removeItem('minutes');
     localStorage.removeItem('seconds');
@@ -230,7 +231,7 @@ function resetAll(){
 }
 
 // clicker function
-
+// raise damage (nom a changer)
 function clickMulti(){
     if(data.money >= data.costs*data.multipl){
         data.money = data.money - data.multipl*data.costs;
@@ -245,6 +246,18 @@ function clickMulti(){
     makeSave();
 }
 
+// gestion des héros
+
+function DispHerosShop(){
+  var dispTmp = String();
+  for(var i=0 ; i<herosDict.length ; i++){
+    dispTmp = dispTmp+'<span> <img src="'+herosDict[i].img+'" alt=""> '+herosDict[i].hName+' : ('+herosDict[i].dmg+' / sec) (cost : '+herosDict[i].cost+') <button onclick=""> <span id="Buy'+herosDict[i].hName+'"> Buy ! </span> </button> / Level Required : '+herosDict[i].levelReq+' </span>'
+  }
+  //console.log(dispTmp);
+  shopSection.innerHTML = dispTmp;
+}
+DispHerosShop();
+/*
 function autoClicks(){
     if(data.damage*data.multipl >= enemy.HP){
       killEnnemie();
@@ -279,10 +292,7 @@ function buyAutoClicks(){
     makeSave();
     dispAll();
 }
-
-function upgradeAuto(){
-    // soon
-}
+*/
 
 // gestion des ennemies :
 

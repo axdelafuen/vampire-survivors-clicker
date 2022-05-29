@@ -1,6 +1,6 @@
 body{
     width: fit-content;
-    background-image: url("../img/introBG.png");
+    background-image: url("../img/ressources/introBG.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -30,6 +30,7 @@ h1{
   justify-content: space-between;
   gap: 50px;
   font-weight: bold;
+  font-size: 25px;
 }
 .infos p{
   display: flex;
@@ -49,7 +50,7 @@ h1{
     background-color: rgba(0, 0, 0, 0.231);
     padding: 0px 0px;
     border-style: none;
-    background-image: url('../img/Stage-Mad_Forest.webp');
+    background-image: url('../img/areas/Stage-Mad_Forest.webp');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100% 100%;

@@ -49,6 +49,6 @@ To Do : VS Clicker
 
 - [ ] Fix le fait que refresh = changer de mob.
 
-- [ ] Faire une classe pour les héros
+- [x] Faire une classe pour les héros
 
 - [ ] Refaire tout le system d'attaque plus propre. (plus lisible)
